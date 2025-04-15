@@ -72,7 +72,7 @@ yarn lint      # Run ESLint analysis
 
 ## 📸 Preview
 
-![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/client/public/banner.png)
+![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/blob/main/client/public/banner.png)
 
 ---
 
