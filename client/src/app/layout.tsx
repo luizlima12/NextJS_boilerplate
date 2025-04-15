@@ -14,7 +14,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS boilerplate",
+  title: {
+    default: "NextJS boilerplate",
+    template: "%s | NextJS boilerplate",
+  },
   description: "A NextJS boilerplate with TypeScript, Tailwind CSS, and more",
 };
 

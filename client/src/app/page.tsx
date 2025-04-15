@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | NextJS boilerplate",
+};
+
 export default function ExemploPageHome() {
   return (
     <div className="p-3">

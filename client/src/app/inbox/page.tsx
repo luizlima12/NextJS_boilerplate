@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inbox",
+};
+
 export default function ExemploPageInbox() {
   return (
     <div className="p-3">
