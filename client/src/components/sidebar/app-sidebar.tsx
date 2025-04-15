@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { InputSearch } from "./input-search";
 import NotFoundSearch from "./not-found-search";
+import Link from "next/link";
 
 export function AppSidebar() {
   const path = usePathname();
@@ -48,10 +49,10 @@ export function AppSidebar() {
                     tooltip={item.title}
                     asChild
                   >
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
