@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { ModeToggle } from "@/components/theme/toggle-theme";
 
 import "./globals.css";
 
@@ -33,7 +34,10 @@ export default function RootLayout({
           <SidebarProvider>
             <AppSidebar />
             <main>
-              <SidebarTrigger />
+              <div className="flex gap-2 items-center mt-[7] ml-1">
+                <SidebarTrigger className="size-8 border" />
+                <ModeToggle />
+              </div>
               {children}
             </main>
           </SidebarProvider>
