@@ -1,19 +1,19 @@
 "use client";
-import { sidebarItems } from "@/consts/exemplo-sidebar-items";
+import LogoSidebar from "@/components/sidebar/logo";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { usePathname } from "next/navigation";
+import { sidebarItems } from "@/consts/exemplo-sidebar-items";
 import { cn } from "@/lib/utils";
-import { InputSearch } from "./input-search";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { InputSearch } from "./input-search";
 
 export function AppSidebar() {
   const path = usePathname();
@@ -32,7 +32,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <LogoSidebar />
           <InputSearch onSearchChange={setSearch} />
           <SidebarGroupContent>
             <SidebarMenu>
