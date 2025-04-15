@@ -1,10 +1,9 @@
+"use client";
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {
@@ -13,13 +12,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { sidebarItems } from "@/consts/exemplo-sidebar-items";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function BreadcrumbNav() {
+  const path = usePathname();
+  const isActive = (url: string) => {
+    return path === url;
+  };
+
   return (
     <Breadcrumb className="ml-3">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <Link href="/">Home</Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -29,19 +36,32 @@ export function BreadcrumbNav() {
               <span className="sr-only">Toggle menu</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem>Documentation</DropdownMenuItem>
-              <DropdownMenuItem>Themes</DropdownMenuItem>
-              <DropdownMenuItem>GitHub</DropdownMenuItem>
+              {sidebarItems.map((item) => (
+                <DropdownMenuItem key={item.url} className="w-40">
+                  <Link
+                    href={item.url}
+                    className={`w-full ${
+                      isActive(item.url) ? "text-primary" : ""
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/docs/components">Components</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+          {sidebarItems.map((item) => {
+            if (path === item.url) {
+              return (
+                <Link key={item.url} href={item.url} className="text-primary">
+                  {item.title}
+                </Link>
+              );
+            }
+          })}
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
