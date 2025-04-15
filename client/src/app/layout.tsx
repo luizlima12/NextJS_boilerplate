@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import { ThemeProvider } from "@/app/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/sidebar/app-sidebar";
+
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -20,14 +23,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jetBrainsMono.variable} antialiased bg-primary`}>
+      <body className={`${jetBrainsMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
