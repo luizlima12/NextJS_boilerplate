@@ -4,8 +4,6 @@
 
 A solid and productive base to kickstart projects with the most up-to-date tools in the React ecosystem. Ideal for scalable, responsive, and high-performance applications.
 
-![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/main/public/preview.png)
-
 ---
 
 ## 💠 Technologies Used
@@ -78,12 +76,6 @@ yarn lint      # Run ESLint analysis
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open issues or pull requests.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
