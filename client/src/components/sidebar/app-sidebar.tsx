@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { InputSearch } from "./input-search";
+import NotFoundSearch from "./not-found-search";
 
 export function AppSidebar() {
   const path = usePathname();
@@ -36,6 +37,7 @@ export function AppSidebar() {
           <InputSearch onSearchChange={setSearch} />
           <SidebarGroupContent>
             <SidebarMenu>
+              {itemsFiltered.length === 0 && <NotFoundSearch />}
               {itemsFiltered.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
