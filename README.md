@@ -72,7 +72,7 @@ yarn lint      # Run ESLint analysis
 
 ## 📸 Preview
 
-> 💡 Add a screenshot or gif in `/public/preview.png` to display it here
+![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/main/public/banner.png)
 
 ---
 
