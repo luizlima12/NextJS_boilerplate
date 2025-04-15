@@ -1,91 +1,92 @@
 # 🚀 NextJS_boilerplate
 
-> Boilerplate moderno com Next.js 15, Tailwind CSS v4 e TypeScript.
+> A modern boilerplate using Next.js 15, Tailwind CSS v4, and TypeScript.
 
-Uma base sólida e produtiva para iniciar projetos com as tecnologias mais atuais do ecossistema React. Ideal para aplicações escaláveis, responsivas e de alta performance.
+A solid and productive base to kickstart projects with the most up-to-date tools in the React ecosystem. Ideal for scalable, responsive, and high-performance applications.
 
 ![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/main/public/preview.png)
 
 ---
 
-## 💠 Tecnologias Utilizadas
+## 💠 Technologies Used
 
-- [Next.js 15](https://nextjs.org/) — Framework React para produção
-- [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) — Estilização utilitária moderna
-- [TypeScript](https://www.typescriptlang.org/) — Tipagem estática para maior robustez
-- [Turbopack](https://turbo.build/pack) — Novo bundler ultra-rápido do Next.js
+- [Next.js 15](https://nextjs.org/) — Production-grade React framework
+- [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) — Modern utility-first styling
+- [TypeScript](https://www.typescriptlang.org/) — Static typing for stronger code
+- [Turbopack](https://turbo.build/pack) — The blazing-fast bundler from Vercel
 
 ---
 
-## ⚙️ Como rodar localmente
+## ⚙️ Getting Started
 
-Clone o repositório:
+Clone the repository:
 
 ```bash
 git clone https://github.com/luizlima12/NextJS_boilerplate.git
 cd NextJS_boilerplate
 ```
 
-Instale as dependências:
+Install the dependencies:
 
 ```bash
 yarn install
 ```
 
-Inicie o servidor de desenvolvimento:
+Run the development server:
 
 ```bash
 yarn dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador 🚀
+Open [http://localhost:3000](http://localhost:3000) in your browser 🚀
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 Project Structure
 
 ```bash
 .
-├── public/             # Assets estáticos
+├── public/             # Static assets
 ├── src/
-│   ├── app/            # Rotas e páginas (App Router)
-│   ├── components/     # Componentes reutilizáveis
-│   ├── assets/         # Imagens e SVGs
-│   ├── lib/            # Funções auxiliares
-│   └── styles/         # Estilos globais
-├── tailwind.config.ts  # Configuração do Tailwind
-└── tsconfig.json       # Configuração do TypeScript
+│   ├── app/            # Routes and pages (App Router)
+│   ├── components/     # Reusable components
+│   ├── assets/         # Images and SVGs
+│   ├── lib/            # Utility functions
+│   └── styles/         # Global styles
+├── tailwind.config.ts  # Tailwind configuration
+└── tsconfig.json       # TypeScript configuration
 ```
 
 ---
 
-## 📦 Scripts úteis
+## 📦 Useful Scripts
 
 ```bash
-yarn dev       # Inicia em modo desenvolvimento
-yarn build     # Gera o build de produção
-yarn start     # Roda o build em produção
-yarn lint      # Analisa o código com ESLint
+yarn dev       # Start development mode
+yarn build     # Create production build
+yarn start     # Run the built app
+yarn lint      # Run ESLint analysis
 ```
 
 ---
 
 ## 📸 Preview
 
-> 💡 Adicione um screenshot ou gif em `/public/preview.png` para exibir aqui
+> 💡 Add a screenshot or gif in `/public/preview.png` to display it here
 
 ---
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
-
----
-
-## 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Contributions are welcome! Feel free to open issues or pull requests.
 
 ---
 
-Feito com 💻 por [@luizlima12](https://github.com/luizlima12)
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Made with 💻 by [@luizlima12](https://github.com/luizlima12)<br>
+<img src="https://github.com/luizlima12.png" width="80" height="80" style="border-radius: 9999px;" alt="Luiz Lima profile image" />
