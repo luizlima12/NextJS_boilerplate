@@ -12,20 +12,31 @@ import {
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { InputSearch } from "./input-search";
+import { useState } from "react";
 
 export function AppSidebar() {
   const path = usePathname();
   const isActive = (url: string) => {
     return path === url;
   };
+  const [search, setSearch] = useState<string | null>(null);
+
+  const itemsFiltered = search
+    ? sidebarItems.filter((item) =>
+        item.title.toLowerCase().includes(search.toLowerCase())
+      )
+    : sidebarItems;
+
   return (
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <InputSearch onSearchChange={setSearch} />
           <SidebarGroupContent>
             <SidebarMenu>
-              {sidebarItems.map((item) => (
+              {itemsFiltered.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     className={cn(
