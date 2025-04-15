@@ -53,7 +53,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser 🚀
 │   ├── assets/         # Images and SVGs
 │   ├── lib/            # Utility functions
 │   └── styles/         # Global styles
-├── tailwind.config.ts  # Tailwind configuration
 └── tsconfig.json       # TypeScript configuration
 ```
 
@@ -72,7 +71,7 @@ yarn lint      # Run ESLint analysis
 
 ## 📸 Preview
 
-![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/blob/main/client/public/banner.png)
+![Banner](https://raw.githubusercontent.com/luizlima12/NextJS_boilerplate/main/client/public/preview.png)
 
 ---
 
