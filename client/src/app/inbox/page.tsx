@@ -1,8 +1,8 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Inbox",
-};
+  title: 'Inbox'
+}
 
 export default function ExemploPageInbox() {
   return (
@@ -13,5 +13,5 @@ export default function ExemploPageInbox() {
         pages using the links in the navigation bar.
       </p>
     </div>
-  );
+  )
 }

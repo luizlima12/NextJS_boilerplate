@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 type LogoNextSvgProps = {
-  className?: string;
-  props?: any;
-};
+  className?: string
+  props?: any
+}
 
 const LogoNextSvg = ({ className, props }: LogoNextSvgProps) => {
   return (
-    <div className={cn("size-25 mt-19", className)}>
+    <div className={cn('size-25 mt-19', className)}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
-        className={cn("text-foreground")}
+        className={cn('text-foreground')}
         viewBox="0 0 394 80"
         {...props}
       >
@@ -26,7 +26,7 @@ const LogoNextSvg = ({ className, props }: LogoNextSvgProps) => {
         />
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default LogoNextSvg;
+export default LogoNextSvg

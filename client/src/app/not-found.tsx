@@ -1,9 +1,9 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+'use client'
+import { Button } from '@/components/ui/button'
+import { useRouter } from 'next/navigation'
 
 export default function NotFound() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold text-center mt-20">
@@ -14,11 +14,11 @@ export default function NotFound() {
         return to the homepage.
       </p>
       <div className="flex justify-center mt-10">
-        <Button onClick={() => router.push("/")} variant={"default"}>
+        <Button onClick={() => router.push('/')} variant={'default'}>
           Go to home page
         </Button>
       </div>
       <div className="flex justify-center mt-10"></div>
     </div>
-  );
+  )
 }

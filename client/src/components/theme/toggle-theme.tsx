@@ -1,19 +1,19 @@
-"use client";
+'use client'
 
-import { Computer, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Computer, Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { cn } from "@/lib/utils";
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { cn } from '@/lib/utils'
 
 export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme } = useTheme()
 
   return (
     <DropdownMenu>
@@ -32,39 +32,39 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="space-y-2">
         <DropdownMenuCheckboxItem
-          onClick={() => setTheme("light")}
+          onClick={() => setTheme('light')}
           className={cn(
-            "flex items-center gap-2",
-            theme === "light" && "bg-accent"
+            'flex items-center gap-2',
+            theme === 'light' && 'bg-accent'
           )}
-          checked={theme === "light"}
+          checked={theme === 'light'}
         >
           <Sun className="h-4 w-4" />
           Light
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
-          onClick={() => setTheme("dark")}
+          onClick={() => setTheme('dark')}
           className={cn(
-            "flex items-center gap-2",
-            theme === "dark" && "bg-accent"
+            'flex items-center gap-2',
+            theme === 'dark' && 'bg-accent'
           )}
-          checked={theme === "dark"}
+          checked={theme === 'dark'}
         >
           <Moon className="h-4 w-4" />
           Dark
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
-          onClick={() => setTheme("system")}
+          onClick={() => setTheme('system')}
           className={cn(
-            "flex items-center gap-2",
-            theme === "system" && "bg-accent"
+            'flex items-center gap-2',
+            theme === 'system' && 'bg-accent'
           )}
-          checked={theme === "system"}
+          checked={theme === 'system'}
         >
           <Computer className="h-4 w-4" />
           System
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

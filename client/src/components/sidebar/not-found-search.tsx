@@ -1,6 +1,6 @@
-import { Info } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
-import { SidebarMenuItem } from "../ui/sidebar";
+import { Info } from 'lucide-react'
+import { Alert, AlertDescription, AlertTitle } from '../ui/alert'
+import { SidebarMenuItem } from '../ui/sidebar'
 
 export default function NotFoundSearch() {
   return (
@@ -13,5 +13,5 @@ export default function NotFoundSearch() {
         </div>
       </Alert>
     </SidebarMenuItem>
-  );
+  )
 }

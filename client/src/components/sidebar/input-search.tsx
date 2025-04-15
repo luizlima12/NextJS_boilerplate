@@ -1,29 +1,29 @@
-"use client";
-import { Search } from "lucide-react";
-import { Label } from "@/components/ui/label";
+'use client'
+import { Search } from 'lucide-react'
+import { Label } from '@/components/ui/label'
 import {
   SidebarGroup,
   SidebarGroupContent,
-  SidebarInput,
-} from "@/components/ui/sidebar";
-import React from "react";
-import { useSidebar } from "@/components/ui/sidebar";
-import useDebounce from "@/hooks/use-debounce";
+  SidebarInput
+} from '@/components/ui/sidebar'
+import React from 'react'
+import { useSidebar } from '@/components/ui/sidebar'
+import useDebounce from '@/hooks/use-debounce'
 
-interface SearchFormProps extends React.ComponentProps<"form"> {
-  onSearchChange?: (value: string) => void;
+interface SearchFormProps extends React.ComponentProps<'form'> {
+  onSearchChange?: (value: string) => void
 }
 
 export function InputSearch({ onSearchChange, ...props }: SearchFormProps) {
-  const [search, setSearch] = React.useState<string>("");
-  const { open } = useSidebar();
-  const debouncedSearch = useDebounce(search, 300);
+  const [search, setSearch] = React.useState<string>('')
+  const { open } = useSidebar()
+  const debouncedSearch = useDebounce(search, 300)
 
   React.useEffect(() => {
     if (onSearchChange) {
-      onSearchChange(debouncedSearch);
+      onSearchChange(debouncedSearch)
     }
-  }, [debouncedSearch, onSearchChange]);
+  }, [debouncedSearch, onSearchChange])
 
   if (open)
     return (
@@ -39,7 +39,7 @@ export function InputSearch({ onSearchChange, ...props }: SearchFormProps) {
               className="pl-8"
               value={search}
               onChange={(e) => {
-                setSearch(e.target.value);
+                setSearch(e.target.value)
               }}
             />
             <Search
@@ -49,5 +49,5 @@ export function InputSearch({ onSearchChange, ...props }: SearchFormProps) {
           </SidebarGroupContent>
         </SidebarGroup>
       </form>
-    );
+    )
 }

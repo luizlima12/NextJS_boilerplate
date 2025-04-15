@@ -1,8 +1,8 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Home | NextJS boilerplate",
-};
+  title: 'Home | NextJS boilerplate'
+}
 
 export default function ExemploPageHome() {
   return (
@@ -13,5 +13,5 @@ export default function ExemploPageHome() {
         pages using the links in the navigation bar.
       </p>
     </div>
-  );
+  )
 }

@@ -1,26 +1,26 @@
-"use client";
+'use client'
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+  BreadcrumbSeparator
+} from '@/components/ui/breadcrumb'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { sidebarItems } from "@/consts/exemplo-sidebar-items";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { sidebarItems } from '@/consts/exemplo-sidebar-items'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function BreadcrumbNav() {
-  const path = usePathname();
+  const path = usePathname()
   const isActive = (url: string) => {
-    return path === url;
-  };
+    return path === url
+  }
 
   return (
     <Breadcrumb className="ml-3">
@@ -28,7 +28,7 @@ export function BreadcrumbNav() {
         <BreadcrumbItem>
           <Link href="/">Home</Link>
         </BreadcrumbItem>
-        {path !== "/" && (
+        {path !== '/' && (
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -43,7 +43,7 @@ export function BreadcrumbNav() {
                       <Link
                         href={item.url}
                         className={`w-full flex items-center gap-3 ${
-                          isActive(item.url) ? "text-primary" : ""
+                          isActive(item.url) ? 'text-primary' : ''
                         }`}
                       >
                         {item.icon && <item.icon />}
@@ -66,7 +66,7 @@ export function BreadcrumbNav() {
                     >
                       {item.title}
                     </Link>
-                  );
+                  )
                 }
               })}
             </BreadcrumbItem>
@@ -74,5 +74,5 @@ export function BreadcrumbNav() {
         )}
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }
