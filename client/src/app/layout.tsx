@@ -6,6 +6,7 @@ import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { ModeToggle } from "@/components/theme/toggle-theme";
 
 import "./globals.css";
+import { BreadcrumbNav } from "@/components/sidebar/breadcumb";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -33,10 +34,11 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <AppSidebar />
-            <main>
-              <div className="flex gap-2 items-center mt-[7] ml-1">
+            <main className="w-full">
+              <div className="flex gap-2 items-center mt-[4] ml-1 p-1">
                 <SidebarTrigger className="size-8 border" />
                 <ModeToggle />
+                <BreadcrumbNav />
               </div>
               {children}
             </main>
